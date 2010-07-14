@@ -15,7 +15,7 @@ while ($PLAYER) {
   sleep 1;
 # pause
   print $PLAYER "p\n";
-  sleep 1.5;
+  sleep 5;
 # unpause
   print $PLAYER "p\n";
 }
