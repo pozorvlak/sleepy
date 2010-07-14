@@ -1,0 +1,46 @@
+Hello, and welcome to sleepy. If you want to use this program, you're probably
+my girlfriend, for whom it was written :-)
+
+Indented lines should be typed at the command prompt (without the indentation).
+
+
+INSTALLATION
+
+First ensure that mplayer is installed:
+
+On Ubuntu:
+    sudo apt-get install mplayer
+
+On Fedora:
+    sudo yum install mplayer
+
+See http://www.mplayerhq.hu/design7/dload.html#binaries for mplayer
+installation instructions for other systems.
+
+Ensure that sleepy is executable (this step /should/ be unnecessary...)
+    chmod a+x sleepy
+
+Next, copy sleepy somewhere that your system can find it:
+    sudo cp sleepy /usr/local/bin
+
+Anywhere in your PATH will do (type "echo $PATH" to see the full list), it
+doesn't have to be /usr/local/bin.
+
+That's it!
+
+
+RUNNING SLEEPY
+
+To play a video (say file1.avi) with the default chunk and pause sizes, type
+
+    sleepy file1.avi
+
+To play a video with a chunk size of 3s and a pause size of 1.5s, type
+
+    sleepy -c 3 -p 1.5 file1.avi
+
+For more information, type
+
+    sleepy --help
+
+If anything is broken or confusing, please email me at miles@assyrian.org.uk.
