@@ -46,10 +46,11 @@ sleepy - play video files a chunk at a time, with pauses.
 =head1 DESCRIPTION
 
 Play the specified FILES a chunk at a time, pausing between chunks. The default
-chunk length is 1 second, and the default pause length is 5 seconds. Requires
-mplayer to be installed.
+chunk length is 1 second, and the default pause length is 5 seconds.
 
-All MPLAYER OPTIONs are passed directly to mplayer.
+Requires mplayer to be installed.
+
+All MPLAYER OPTIONs are passed directly to mplayer. See the mplayer manpage for more details on mplayer options.
 
 =head1 AUTHOR
 
