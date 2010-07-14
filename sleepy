@@ -3,6 +3,9 @@
 use strict;
 use warnings;
 use IO::Handle;
+use Pod::Usage;
+
+pod2usage(2) unless @ARGV;
 
 my $PLAYER;
 print STDERR "Playing...";
@@ -20,3 +23,36 @@ while ($PLAYER) {
   print $PLAYER "p\n";
 }
 
+=head1 NAME
+
+sleepy - play video files a chunk at a time, with pauses.
+
+=head1 SYNOPSIS
+
+    sleepy [FILE]...
+    sleepy [MPLAYER OPTION]... [FILE]...
+
+=head1 DESCRIPTION
+
+Play the specified FILES a chunk at a time, pausing between chunks. The default
+chunk length is 1s, and the default pause length is 5s.
+
+All MPLAYER OPTIONs are passed directly to mplayer.
+
+=head1 AUTHOR
+
+Miles Gould, with help from Ed Leiper and Mat Brown.
+
+=head1 REPORTING BUGS
+
+Please report bugs and send patches to C<miles@assyrian.org.uk>. Or (better),
+fork the project on GitHub and send me a pull request when you're done.
+
+=head1 COPYRIGHT
+
+This program is free software, and is available under the same terms as Perl
+itself.
+
+=SEE ALSO
+
+C<mplayer(1)>, C<http://www.mplayerhq.hu>.
