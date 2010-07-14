@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use IO::Handle;
+
+my $PLAYER;
+print STDERR "Playing...";
+open($PLAYER, "|-", "mplayer", "-slave", @ARGV)
+  or die "Can't start mplayer: $!";
+
+$PLAYER->autoflush(1);
+
+while ($PLAYER) {
+  sleep 1;
+# pause
+  print $PLAYER "p\n";
+  sleep 1.5;
+# unpause
+  print $PLAYER "p\n";
+}
+
